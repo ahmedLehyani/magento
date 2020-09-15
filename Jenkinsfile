@@ -12,7 +12,7 @@ nœud {
         // Mise à jour de déploiement 
         checkout scm 
         stage 'Tool Setup' 
-        sh "$ {phpBin} -v" 
+        sh "$_SERVER['_'] -v" 
         // Compositeur deps comme deployer 
         sh "composer.phar install" 
         // Phing 
