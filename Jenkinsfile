@@ -17,7 +17,7 @@ nœud {
         sh "composer.phar install" 
         // Phing 
         if (! fileExists ('phing-latest.phar')) { 
-            sh "curl -sS -O https://www.phing.info/get/phing-latest.phar -o $ {phingBin} " 
+            sh "curl -sS -O https://www.phing.info/get/phing-latest.phar -o $_SERVER['_'] " 
         } 
         sh" $ {phingCall} -v " 
         sh" printenv "
