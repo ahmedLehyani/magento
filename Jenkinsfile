@@ -2,7 +2,7 @@ node {
 
      // les variables ENV 
     
-    //env.STAGE = STAGE 
+    env.STAGE = STAGE 
     //env.TAG = TAG 
     //env.REINSTALL_PROJECT = REINSTALL_PROJECT 
     //env.DELETE_VENDOR = DELETE_VENDOR 
@@ -23,14 +23,7 @@ node {
             sh "${phingCall} -v" 
             sh "printenv"
         }
-        stage('Example Build') {
-            echo 'Hello, Maven'
-           // h 'mvn --version'
-        }
-        stage("Example Test") {
-            echo 'Hello, JDK'
-            sh 'java -version'
-        }
+       
     } catch (err) { 
         currentBuild.result = 'FAILURE' 
         throw err 
