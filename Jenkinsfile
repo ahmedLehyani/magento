@@ -1,4 +1,4 @@
-nœud { 
+node { 
     // les variables ENV 
     env.PWD = PWD () 
     env.STAGE = STAGE 
