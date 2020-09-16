@@ -2,12 +2,12 @@ node {
 
      // les variables ENV 
     
-    env.STAGE = STAGE 
-    env.TAG = TAG 
-    env.REINSTALL_PROJECT = REINSTALL_PROJECT 
-    env.DELETE_VENDOR = DELETE_VENDOR 
-    env.GENERATE_ASSETS = GENERATE_ASSETS 
-    env.DEPLOY = DEPLOY 
+    //env.STAGE = STAGE 
+    //env.TAG = TAG 
+    //env.REINSTALL_PROJECT = REINSTALL_PROJECT 
+    //env.DELETE_VENDOR = DELETE_VENDOR 
+    //env.GENERATE_ASSETS = GENERATE_ASSETS 
+    //env.DEPLOY = DEPLOY 
 
     try { 
         // Mise à jour de déploiement 
