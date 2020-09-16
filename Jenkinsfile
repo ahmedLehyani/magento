@@ -13,7 +13,7 @@ node {
         // Mise à jour de déploiement 
         checkout scm 
         stage("Tool Setup") {
-            sh "$_SERVER['_'] -v" 
+            sh "php -v" 
             // Compositeur deps comme deployer 
             sh "composer.phar install" 
             // Phing 
