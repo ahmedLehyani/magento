@@ -1,13 +1,10 @@
 node("node-name") {
-  try {
-    stage("Process") {
-      error("This will fail")
-    }
-  } catch(Exception error) {
-    currentBuild.result = 'SUCCESS'
-    return
+ stage('Example Build') {
+     echo 'Hello, Maven'
+     sh 'mvn --version'
   }
-  stage("Skipped") {
-     // This stage will never run
+  stage("Example Test") {
+     echo 'Hello, JDK'
+     sh 'java -version'
   }
 }
