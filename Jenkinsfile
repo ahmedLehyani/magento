@@ -2,7 +2,7 @@ node {
 
      // les variables ENV 
     
-    env.STAGE = STAGE 
+    //env.STAGE = STAGE 
     //env.TAG = TAG 
     //env.REINSTALL_PROJECT = REINSTALL_PROJECT 
     //env.DELETE_VENDOR = DELETE_VENDOR 
