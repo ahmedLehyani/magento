@@ -59,7 +59,7 @@ nœud {
         stage 'Deployment' 
         if (DEPLOY == 'true') { 
             sshagent (credentials: [jenkinsSshCredentialId]) { 
-                sh "./dep deploy --tag = $ {TAG} $ {STAGE}" 
+                sh "./dep deploy --tag = ${TAG} ${STAGE}" 
             } 
         }
 
