@@ -30,13 +30,13 @@ nœud {
         } else { 
             dir ('shop') { 
                 sh "git fetch origin" 
-                sh "git checkout -f $ { TAG} " 
-                sh" git reset --hard origin / $ {TAG} " 
+                sh "git checkout -f $ { TAG}" 
+                sh "git reset --hard origin / $ {TAG}" 
             } 
         } 
         dir ('shop') { 
-            sh" $ {phingCall} jenkins: flush-all " 
-            sh" $ {phingCall} jenkins: setup-project " 
+            sh "$ {phingCall} jenkins: flush-all" 
+            sh "$ {phingCall} jenkins: setup-project" 
             sh "$ {phingCall} jenkins: flush-all" 
         }
         
@@ -45,14 +45,14 @@ nœud {
             if (GENERATE_ASSETS == 'true') { 
                 sh "$ {phingCall} deploy: passage en mode production" 
                 sh "$ {phingCall} deploy: compile" 
-                sh " $ {phingCall} deploy: static-content " 
-                sh" bash bin / build_artifacts_compress.sh " 
+                sh "$ {phingCall} deploy: static-content" 
+                sh "bash bin / build_artifacts_compress.sh" 
         
                 archiveArtifacts 'config.tar.gz' 
                 archiveArtifacts 'var_di.tar.gz' 
                 archiveArtifacts 'var_generation.tar.gz' 
-                archiveArtifacts 'pub_static.tar.gz ' 
-                archiveArtifacts' shop.tar.gz ' 
+                archiveArtifacts 'pub_static.tar.gz' 
+                archiveArtifacts 'shop.tar.gz' 
             } 
         }
 
