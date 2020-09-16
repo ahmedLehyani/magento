@@ -1,4 +1,4 @@
-node("node-name") {
+node {
  stage('Example Build') {
      echo 'Hello, Maven'
      sh 'mvn --version'
