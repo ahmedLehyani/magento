@@ -16,7 +16,7 @@ node {
             sh "php -v" 
             // Compositeur deps comme deployer 
             sh "pwd"
-            sh "composer install" 
+            sh "php composer.phar install" 
             // Phing 
             if (! fileExists ('phing-latest.phar')) { 
                 sh "curl -sS -O https://www.phing.info/get/phing-latest.phar -o $_SERVER['_'] " 
